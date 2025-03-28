@@ -59,12 +59,12 @@ async def start_command(client: Client, message: Message):
             if "verify_" in message.text:
                 _, token = message.text.split("_", 1)
                 if verify_status['verify_token'] != token:
-                    return await message.reply("Your token is invalid or expired. Try again by clicking /start.")
+                    return await message.reply("Oopsie! It looks like your token is either invalid or has expired! 💔 But don’t worry! Just click on /start to try again! Yay!")
                 await update_verify_status(id, is_verified=True, verified_time=time.time())
                 if verify_status["link"] == "":
                     reply_markup = None
                 return await message.reply(
-                    f"Your token has been successfully verified and is valid for {get_exp_time(VERIFY_EXPIRE)}",
+                    f"Oh, Senpai! Thank you for being so understanding! 🌸 I’ll do my very best to make everything perfect for you! Now, let’s dive right in! <a>btw here's ur token valid time {get_exp_time(VERIFY_EXPIRE)} </a>",
                     reply_markup=reply_markup,
                     protect_content=False,
                     quote=True
@@ -79,7 +79,7 @@ async def start_command(client: Client, message: Message):
                     [InlineKeyboardButton('• ʜᴏᴡ ᴛᴏ ᴏᴘᴇɴ ʟɪɴᴋ •', url=TUT_VID)]
                 ]
                 return await message.reply(
-                    f"<b>Your token has expired. Please refresh your token to continue.\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. Passing one ad allows you to use the bot for {get_exp_time(VERIFY_EXPIRE)}</b>",
+                    f"<b>Uh-oh, Senpai! It looks like your token has expired! 😢 But don’t worry! Just refresh your token, and we can continue our fun together!\n\nToken Timeout: {get_exp_time(VERIFY_EXPIRE)}\n\nWhat is the token?\n\nThis is an ads token. Passing one ad allows you to use the bot for {get_exp_time(VERIFY_EXPIRE)}</b>",
                     reply_markup=InlineKeyboardMarkup(btn),
                     protect_content=False,
                     quote=True
@@ -113,7 +113,7 @@ async def start_command(client: Client, message: Message):
                 print(f"Error decoding ID: {e}")
                 return
 
-        temp_msg = await message.reply("Please wait...")
+        temp_msg = await message.reply("Please wait a Lil bit okay?")
         try:
             messages = await get_messages(client, ids)
         except Exception as e:
@@ -146,7 +146,7 @@ async def start_command(client: Client, message: Message):
 
         if FILE_AUTO_DELETE > 0:
             notification_msg = await message.reply(
-                f"<b>This file will be deleted in {get_exp_time(FILE_AUTO_DELETE)}. Please save or forward it to your saved messages before it gets deleted.</b>"
+                f"<b>Please be careful, Senpai! This file is set to vanish in{get_exp_time(FILE_AUTO_DELETE)} </b>"
             )
 
             await asyncio.sleep(FILE_AUTO_DELETE)
@@ -177,7 +177,7 @@ async def start_command(client: Client, message: Message):
     else:
         reply_markup = InlineKeyboardMarkup(
             [
-                    [InlineKeyboardButton("• ᴍᴏʀᴇ ᴄʜᴀɴɴᴇʟs •", url="https://t.me/Nova_Flix/50")],
+                    [InlineKeyboardButton("• ᴍᴏʀᴇ ᴄʜᴀɴɴᴇʟs •", url="https://t.me/wleakshere")],
 
     [
                     InlineKeyboardButton("• ᴀʙᴏᴜᴛ", callback_data = "about"),
