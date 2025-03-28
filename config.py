@@ -27,7 +27,7 @@ API_HASH = os.environ.get("API_HASH", "257516f22417652d03896cb2e007d6df")
 #Your db channel Id
 CHANNEL_ID = int(os.environ.get("CHANNEL_ID", "-1002348593955"))
 # NAMA OWNER
-OWNER = os.environ.get("OWNER", "sewxiy")
+OWNER = os.environ.get("OWNER", "wleaksOwner")
 #OWNER ID
 OWNER_ID = int(os.environ.get("OWNER_ID", "1672634667"))
 #Port
@@ -49,8 +49,8 @@ FORCE_SUB_CHANNEL4 = int(os.environ.get("FORCE_SUB_CHANNEL4", "0"))#put 0 to dis
 
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
 
-START_PIC = os.environ.get("START_PIC", "https://www.imghippo.com/i/Jre6223Frk.jpg")
-FORCE_PIC = os.environ.get("FORCE_PIC", "https://www.imghippo.com/i/Jre6223Frk.jpg")
+START_PIC = os.environ.get("START_PIC", "https://t.me/c/2348593955/339")
+FORCE_PIC = os.environ.get("FORCE_PIC", "https://t.me/c/2348593955/339")
 
 # Turn this feature on or off using True or False put value inside  ""
 # TRUE for yes FALSE if no 
